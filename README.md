@@ -10,7 +10,7 @@ Ini adalah proyek website HTML sederhana untuk perayaan ulang tahun. Cocok untuk
 - `kamera.jpg` — Gambar dekorasi tambahan untuk halaman.
 - `lagu.mp3` — Musik ulang tahun yang diputar otomatis.
 - `F/` — Folder berisi koleksi foto-foto pribadi yang ditampilkan di halaman.
-- `README.md` — File dokumentasi proyek ini.
+- `A/` — Folder berisi koleksi foto-foto pribadi yang ditampilkan di halaman.
 
 ---
 
@@ -24,6 +24,7 @@ Ini adalah proyek website HTML sederhana untuk perayaan ulang tahun. Cocok untuk
 ## 📷 Catatan
 
 Folder `F/` berisi foto-foto yang ditampilkan pada halaman. Pastikan semua file gambar tetap berada dalam folder ini agar halaman bisa menampilkannya dengan benar.
+Folder `A/` berisi foto-foto yang ditampilkan pada halaman. Pastikan semua file gambar tetap berada dalam folder ini agar halaman bisa menampilkannya dengan benar.
 
 ---
 

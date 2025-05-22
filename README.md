@@ -1,4 +1,4 @@
-# 🎉 Spesial untuk Ariska
+# Spesial untuk Ariska
 
 Selain Ariska gaboleh liatttttt!
 
@@ -25,9 +25,3 @@ Selain Ariska gaboleh liatttttt!
 
 - Folder `F/` berisi foto-foto yang ditampilkan pada halaman. Pastikan semua file gambar tetap berada dalam folder ini agar halaman bisa menampilkannya dengan benar.
 - Folder `A/` berisi foto-foto yang ditampilkan pada halaman. Pastikan semua file gambar tetap berada dalam folder ini agar halaman bisa menampilkannya dengan benar.
-
----
-
-## ✨ Tujuan Proyek
-
-Proyek ini dibuat sebagai latihan dasar HTML dan pengenalan terhadap struktur file web sederhana.

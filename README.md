@@ -1,6 +1,6 @@
-# 🎉 Website Ulang Tahun Sederhana
+# 🎉 Spesial untuk Ariska
 
-Ini adalah proyek website HTML sederhana untuk perayaan ulang tahun. Cocok untuk latihan awal pembuatan halaman web dengan HTML dasar.
+Selain Ariska gaboleh liatttttt!
 
 ---
 

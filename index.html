@@ -1,458 +1,458 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kenangan Spesial</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Nunito', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fefcfb;
-      color: #333;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kenangan Spesial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fefcfb;
+      color: #333;
+    }
 
-    nav {
-      background: linear-gradient(to right, #96b3a6, #527e77);
-      color: white;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 20px 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 5;
-      border-bottom: 2px solid #f7c1c0;
-    }
+    nav {
+      background: linear-gradient(to right, #96b3a6, #527e77);
+      color: white;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      border-bottom: 2px solid #f7c1c0;
+    }
 
-    nav button {
-      background: rgba(255, 255, 255, 0.2);
-      color: white;
-      border: none;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      padding: 12px 18px;
-      border-radius: 12px;
-      transition: background 0.3s, transform 0.2s;
-    }
+    nav button {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 12px 18px;
+      border-radius: 12px;
+      transition: background 0.3s, transform 0.2s;
+    }
 
-    nav button:hover {
-      background: rgba(255, 255, 255, 0.4);
-      transform: scale(1.05);
-    }
+    nav button:hover {
+      background: rgba(255, 255, 255, 0.4);
+      transform: scale(1.05);
+    }
 
-    .page {
-      padding: 50px 20px;
-      display: none;
-      animation: fadeIn 0.5s ease-in-out;
-    }
+    .page {
+      padding: 50px 20px;
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
 
-    .page.active {
-      display: block;
-    }
+    .page.active {
+      display: block;
+    }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
 
-    #home {
-      text-align: center;
-    }
+    #home {
+      text-align: center;
+    }
 
-    #home .circle-img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #fda085;
-      margin-bottom: 25px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+    #home .circle-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fda085;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-    #home h1 {
-      margin-bottom: 30px;
-    }
+    #home h1 {
+      margin-bottom: 30px;
+    }
 
-    .option-boxes {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 15px;
-    }
+    .option-boxes {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
 
-    .option-boxes button {
-      background: linear-gradient(90deg,#96b3a6, #527e77);
-      color: white;
-      border: none;
-      border-radius: 15px;
-      font-size: 18px;
-      cursor: pointer;
-      padding: 15px 30px;
-      width: 200px;
-      transition: transform 0.3s;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
+    .option-boxes button {
+      background: linear-gradient(90deg,#96b3a6, #527e77);
+      color: white;
+      border: none;
+      border-radius: 15px;
+      font-size: 18px;
+      cursor: pointer;
+      padding: 15px 30px;
+      width: 200px;
+      transition: transform 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
 
-    .option-boxes button:hover {
-      transform: translateY(-3px);
-    }
+    .option-boxes button:hover {
+      transform: translateY(-3px);
+    }
 
-    .memory-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      align-items: flex-start;
-      justify-content: center;
-      margin-bottom: 40px;
-    }
+    .memory-content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
 
-    .memory-content img {
-      width: 100%;
-      max-width: 180px; /* Dikecilkan dari 200px */
-      border-radius: 12px;
-      cursor: zoom-in;
-      transition: transform 0.3s ease;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    }
+    .memory-content img {
+      width: 100%;
+      max-width: 180px; /* Dikecilkan dari 200px */
+      border-radius: 12px;
+      cursor: zoom-in;
+      transition: transform 0.3s ease;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
 
-    .memory-content img:hover {
-      transform: scale(1.02);
-    }
+    .memory-content img:hover {
+      transform: scale(1.02);
+    }
 
-    .memories-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Flexibel & responsif */
-      gap: 16px;
-      justify-content: center;
-      padding: 20px;
-    }
+    .memories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Flexibel & responsif */
+      gap: 16px;
+      justify-content: center;
+      padding: 20px;
+    }
 
-    .memory-item {
-      background-color: #fff7ee;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+    .memory-item {
+      background-color: #fff7ee;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-    .memory-item img {
-      width: 100%;
-      height: auto;
-      cursor: pointer;
-      border-bottom: 1px solid #ddd;
-    }
+    .memory-item img {
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      border-bottom: 1px solid #ddd;
+    }
 
-    .memory-item p {
-      padding: 10px;
-      font-size: 11px; /* Lebih kecil agar teks tidak terlalu panjang */
-      text-align: justify;
-    }
+    .memory-item p {
+      padding: 10px;
+      font-size: 11px; /* Lebih kecil agar teks tidak terlalu panjang */
+      text-align: justify;
+    }
 
-    .image-box {
-      flex: 1 1 300px; /* Dikecilkan dari 350px */
-      display: flex;
-      justify-content: center;
-    }
+    .image-box {
+      flex: 1 1 300px; /* Dikecilkan dari 350px */
+      display: flex;
+      justify-content: center;
+    }
 
-    .description {
-      flex: 1 1 350px; /* Dikecilkan agar lebih proporsional */
-      max-width: 450px;
-      text-align: justify;
-      background-color: #fff3e6;
-      padding: 14px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
+    .description {
+      flex: 1 1 350px; /* Dikecilkan agar lebih proporsional */
+      max-width: 450px;
+      text-align: justify;
+      background-color: #fff3e6;
+      padding: 14px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .memory-content {
-        flex-direction: column;
-        align-items: center;
-      }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .memory-content {
+        flex-direction: column;
+        align-items: center;
+      }
 
-      .image-box,
-      .description {
-        max-width: 90%;
-      }
+      .image-box,
+      .description {
+        max-width: 90%;
+      }
 
-      .memory-content img {
-        max-width: 100%;
-      }
+      .memory-content img {
+        max-width: 100%;
+      }
 
-      .memory-item {
-        width: 90%; /* Biar pas di layar HP */
-      }
-    }
+      .memory-item {
+        width: 90%; /* Biar pas di layar HP */
+      }
+    }
 
-    #messages img {
-      width: 100%;
-      max-width: 500px;
-      display: block;
-      margin: 0 auto 20px auto;
-      border-radius: 10px;
-    }
+    #messages img {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 0 auto 20px auto;
+      border-radius: 10px;
+    }
 
-    #messages p {
-      text-align: justify;
-      font-size: 17px;
-      background-color: #f3f9ff;
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 24px 32px;
-      border-radius: 0 4px 10px;
-    }
+    #messages p {
+      text-align: justify;
+      font-size: 17px;
+      background-color: #f3f9ff;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 24px 32px;
+      border-radius: 0 4px 10px;
+    }
 
-    .gift-content {
-      text-align: center;
-    }
+    .gift-content {
+      text-align: center;
+    }
 
-    .gift-content img {
-      width: 90%;
-      max-width: 600px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-    }
+    .gift-content img {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    }
 
-    .gift-text {
-      text-align: justify;
-      max-width: 700px;
-      margin: 0 auto;
-      background-color: #eafaf1;
-      padding: 24px 32px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-    }
+    .gift-text {
+      text-align: justify;
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: #eafaf1;
+      padding: 24px 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
 
-    .modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 10;
-      display: none;
-    }
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      display: none;
+    }
 
-    .modal img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 10px;
-    }
+    .modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
 
-    @media (min-width: 768px) {
-      .memory-content {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-  </style>
+    @media (min-width: 768px) {
+      .memory-content {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <nav aria-label="Navigasi Halaman">
-    <button onclick="navigate('home')">Beranda</button>
-    <button onclick="navigate('messages')">Opsi 1</button>
-    <button onclick="navigate('gifts')">Opsi 2</button>
-    <button onclick="navigate('memories')">Opsi 3</button>
-  </nav>
+  <nav aria-label="Navigasi Halaman">
+    <button onclick="navigate('home')">Beranda</button>
+    <button onclick="navigate('messages')">Opsi 1</button>
+    <button onclick="navigate('gifts')">Opsi 2</button>
+    <button onclick="navigate('memories')">Opsi 3</button>
+  </nav>
 
-  <main>
-    <section id="home" class="page active">
-      <img src="devina/dataset/A1.jpg" alt="Foto profil beranda" class="circle-img" onclick="zoomImage(this)">
-      <h1>꧁HAPPY☆BIRTHDAY꧂</h1>
-      <div class="option-boxes">
-        <button onclick="navigate('messages')">Opsi 1</button>
-        <button onclick="navigate('gifts')">Opsi 2</button>
-        <button onclick="navigate('memories')">Opsi 3</button>
-      </div>
+  <main>
+    <section id="home" class="page active">
+            <img src="dataset/A1.jpg" alt="Foto profil beranda" class="circle-img" onclick="zoomImage(this)">
+      <h1>꧁HAPPY☆BIRTHDAY꧂</h1>
+      <div class="option-boxes">
+        <button onclick="navigate('messages')">Opsi 1</button>
+        <button onclick="navigate('gifts')">Opsi 2</button>
+        <button onclick="navigate('memories')">Opsi 3</button>
+      </div>
 
-    </section>
-    <section id="memories" class="page">
-      <div class="memories-grid">
-        <div class="memory-item">
-          <img src="devina/dataset/F1.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
-          <p>Download tele cuma buat ngeliat ariska online soalnya kalo di whatsapp gabisa hahaha, ini waktu ngucapin ariska wisuda, untung dibales, kalau enggak tadinya mau nyerah aja takut lu nya risih gitu selama ini gua chat mulu.</p>
-        </div>
-        <div class="memory-item">
-          <img src="devina/dataset/F2.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
-          <p>Setelah 4 TAHUN???!!! Terima kasih yaAllah wkwkwkwkwkwkwkwkwkwkwkwkwk</p>
-        </div>
-        <div class="memory-item">
-          <img src="devina/dataset/F4.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
-          <p>Pulang sholat maghrib jamaah di masjid deket rumah wina, ini terawikawok tiba-tiba diajak sholat, gpp mendekatkan diri kpd Allah SWT, thx ariska.</p>
-        </div>
-        <div class="memory-item">
-          <img src="devina/dataset/F10.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
-          <p>Main sama ariska tapi makanannya gaenak, pls info tempat makan yang enak buat ngajak ariska makan?! Sedih banget tiap main sama gua gapernah enak makanannya huhu wkwkwkwkwk</p>
-        </div>
-        <div class="memory-item">
-          <img src="devina/dataset/F3.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
-          <p>Nah ini nih! Ini bermain bersama ariska di Ruangnamu, sekalian membahas hot news sobari uhuy wkwkwkwk gak deh di sini sedih banget cok bapak gua ketauan selingkuh, untung ada ariska.</p>
-        </div>
-        <div class="memory-item">
-          <img src="devina/dataset/F6.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
-          <p>Beli es duren mas yanto di bogor, ternyata maksudnya ariska bukan yang ini! Hufffff salah beli tp gapapa katanya tetep enak & tetep senangggg, ariska senang aca pun juga buahahahahaha</p>
-        </div>
-        <div class="memory-item">
-          <img src="devina/dataset/F5.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
-          <p>Ini waktu aca mulai aktif bekerja di bogor lagi jadi sebelum menjadi warga bogor seutuhnya bertemu dulu sama ariska. Di sini ariska sambil kerja, terharu lagi sibuk kerja masih nyempetin ketemu huuu dasar ibu peri!</p>
-        </div>
-        <div class="memory-item">
-          <img src="devina/dataset/F7.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
-          <p>Mau ngasih kejutan tadinya eh ariskanya ga di bona tp gua juga lupa kalau dia event tanggal segitu wkwkwk gapapaaa asupan makanan setelah bekerja keras gatau beneran suka apa engga, gatau juga masih enak apa engga soalnya baru balik jam 10 malem orgil??!!</p>
-        </div>
-        <div class="memory-item">
-          <img src="devina/dataset/F8.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
-          <p>Bukber sama ariska, 1000/10, apapun yang ariska pilih selalu terbaik! Di sini sebenernya sedih banget karena ngiranya bakal ketemu lagi di 2026 karena udah ttd sama PT di Sulawesi, untung ada kalbe, love u kalbe, jadi bisa main lagi sama ariska! hahahahaha</p>
-        </div>
-        <div class="memory-item">
-          <img src="devina/dataset/F9.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
-          <p>Hadiah spesial dari aca untuk ariska, gak seru karena ga ngasih langsung mikirnya ga bakal balik ke jakarta makanya hadiahnya duluan wkwkwkwk tapi ternyata dikirimin pap matanya udah sembab, huhu cengeng wkwkwkwk janganlah nangis-nangis, gua maunya lu happy-happy aja bro</p>
-        </div>
-        <div class="memory-item">
-          <img src="devina/dataset/F11.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
-          <p>Mochi surga! Ariska lagi capek-capeknya kerja, semoga mochi surga ini bisa bikin capeknya ilang! hahahaha, semoga lu selalu percaya bahwa akan ada hal baik dari setiap perbuatan baik ya ariska, semangat kerjanya gaboleh nyerahhh!!</p>
-        </div>
-      </div>
-    </section>
+    </section>
+    <section id="memories" class="page">
+      <div class="memories-grid">
+        <div class="memory-item">
+                    <img src="dataset/F1.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
+          <p>Download tele cuma buat ngeliat ariska online soalnya kalo di whatsapp gabisa hahaha, ini waktu ngucapin ariska wisuda, untung dibales, kalau enggak tadinya mau nyerah aja takut lu nya risih gitu selama ini gua chat mulu.</p>
+        </div>
+        <div class="memory-item">
+                    <img src="dataset/F2.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
+          <p>Setelah 4 TAHUN???!!! Terima kasih yaAllah wkwkwkwkwkwkwkwkwkwkwkwkwk</p>
+        </div>
+        <div class="memory-item">
+                    <img src="dataset/F4.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
+          <p>Pulang sholat maghrib jamaah di masjid deket rumah wina, ini terawikawok tiba-tiba diajak sholat, gpp mendekatkan diri kpd Allah SWT, thx ariska.</p>
+        </div>
+        <div class="memory-item">
+                    <img src="dataset/F10.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
+          <p>Main sama ariska tapi makanannya gaenak, pls info tempat makan yang enak buat ngajak ariska makan?! Sedih banget tiap main sama gua gapernah enak makanannya huhu wkwkwkwkwk</p>
+        </div>
+        <div class="memory-item">
+                    <img src="dataset/F3.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
+          <p>Nah ini nih! Ini bermain bersama ariska di Ruangnamu, sekalian membahas hot news sobari uhuy wkwkwkwk gak deh di sini sedih banget cok bapak gua ketauan selingkuh, untung ada ariska.</p>
+        </div>
+        <div class="memory-item">
+                    <img src="dataset/F6.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
+          <p>Beli es duren mas yanto di bogor, ternyata maksudnya ariska bukan yang ini! Hufffff salah beli tp gapapa katanya tetep enak & tetep senangggg, ariska senang aca pun juga buahahahahaha</p>
+        </div>
+        <div class="memory-item">
+                    <img src="dataset/F5.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
+          <p>Ini waktu aca mulai aktif bekerja di bogor lagi jadi sebelum menjadi warga bogor seutuhnya bertemu dulu sama ariska. Di sini ariska sambil kerja, terharu lagi sibuk kerja masih nyempetin ketemu huuu dasar ibu peri!</p>
+        </div>
+        <div class="memory-item">
+                    <img src="dataset/F7.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
+          <p>Mau ngasih kejutan tadinya eh ariskanya ga di bona tp gua juga lupa kalau dia event tanggal segitu wkwkwk gapapaaa asupan makanan setelah bekerja keras gatau beneran suka apa engga, gatau juga masih enak apa engga soalnya baru balik jam 10 malem orgil??!!</p>
+        </div>
+        <div class="memory-item">
+                    <img src="dataset/F8.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
+          <p>Bukber sama ariska, 1000/10, apapun yang ariska pilih selalu terbaik! Di sini sebenernya sedih banget karena ngiranya bakal ketemu lagi di 2026 karena udah ttd sama PT di Sulawesi, untung ada kalbe, love u kalbe, jadi bisa main lagi sama ariska! hahahahaha</p>
+         </div>
+        <div class="memory-item">
+                    <img src="dataset/F9.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
+          <p>Hadiah spesial dari aca untuk ariska, gak seru karena ga ngasih langsung mikirnya ga bakal balik ke jakarta makanya hadiahnya duluan wkwkwkwk tapi ternyata dikirimin pap matanya udah sembab, huhu cengeng wkwkwkwk janganlah nangis-nangis, gua maunya lu happy-happy aja bro</p>
+        </div>
+        <div class="memory-item">
+                    <img src="dataset/F11.jpg" alt="Kenangan spesial" onclick="zoomImage(this)">
+          <p>Mochi surga! Ariska lagi capek-capeknya kerja, semoga mochi surga ini bisa bikin capeknya ilang! hahahaha, semoga lu selalu percaya bahwa akan ada hal baik dari setiap perbuatan baik ya ariska, semangat kerjanya gaboleh nyerahhh!!</p>
+        </div>
+      </div>
+    </section>
 
-    <section id="messages" class="page">
-      <img src="devina/dataset/A2.jpg" alt="Pesan spesial untukmu" onclick="zoomImage(this)">
-      <p style="margin-top: 0; margin-bottom: 0.5em; line-height: 1.5;">
-        Haiii! Selamat bertambah usia, Ariska. Selamat bertambah dan bertumbuh, dari segala hal yang ada di dunia. Hahahaha gak nyangka ya? Ariska, 4 tahun bukan waktu yang sebentar buat gua. Bahkan, terkadang gua masih gak percaya kita udah deket lagi. Selama 4 tahun kita belajar tumbuh dan mungkin gak saling tau tentang hal berat apa aja yang udah kita lewatin. Meskipun begitu, dengan ketemunya kita lagi di saat ini berarti.. hmm apa ya? Lulus ujian kali ya? Hahahaha. Makasih ya ris udah bertahan sejauh ini, kereenn!
-      </p>
-      <p style="margin-top: 0; margin-bottom: 0.5em; line-height: 1.5;">
-        Terima kasih juga atas segala kesempatannya, Ariska. Walaupun lu selalu bilang kesempatan ini hasil cerminan dari orang lain, tetep gua akan berterima kasih. Bisa baikan sama lu tuh hal yang udah gua tunggu sejak lama, dan sayangnya gua ga pernah bisa nunjukkin seberapa mau gua buat damai. Bukan karena ga niat, bukan. Sulit bagi gua nunjukkin keinginan buat damai sama lu karena gua yang masih ragu sama diri gua sendiri. Udah baik belum ya? Udah berubah belum ya? Karena rasanya semakin hari gua semakin hancur, dan takut dampaknya ke lu. Gua percaya tanpa gua pun lu udah bahagia, kalau dengan adanya gua, apa iya kebahagiaan lu bakal bertambah? Atau justru malah berkurang? Lagi dan lagi yang gua mau itu cuma bikin lu bahagia aja ris, rasanya kalau bisa damai tapi malah memperburuk suasana esensi dari “damai” itu sendiri malah ga tercipta kan? Jadi ya buat apa damai kalau bahagianya sama aja? Atau malah yang tadinya udah bahagia eh temenan sama gua malah memperkeruh suasana? Lebih ikhlas musuhan dan ngeliat lu bahagia ris daripada temenan sama gua malah kebawa hancurnya hidup gua hahahaha.
-      </p>
-      <p style="margin-top: 0; margin-bottom: 0.5em; line-height: 1.5;">
-        Perubahan dalam hidup adalah suatu hal yang biasa terjadi. Meskipun begitu sebenernya gua cukup kaget pas tau lu ngasep ris. Dulu, gua inget banget lu pernah bilang ke gua “jikalau aca merokok, ariska bakal marah besar dan cut off aca dari hidup ariska” dan lucunya karena kita berantem lama banget ya selama 4 tahun, alasan itu gua manipulasi di otak gua, yaaa gua ngerokok waktu itu, cuma biar dapet jawaban aja dari otak gua ini, “ca lu dimusuhin ariska tuh karena lu ngerokok, kan dia benci perokok” wkwkwk begitu kira-kira, tapi gua selalu percaya kalau suatu hal yang terjadi itu pasti ada alasannya. Lu memilih untuk bertahan sampai saat ini, dengan segala upaya bentuk cara lu pun udah bisa menggambarkan kalau diri lu hebat banget ris, makasih ya!
-      </p>
-      <p style="margin-top: 0; margin-bottom: 0.5em; line-height: 1.5;">
-        Ariska, semoga dengan bertambahnya usia ini semakin banyak hal-hal baik yang dateng ya, dan semoga gua salah satu di antaranya. Semoga di umur yang sekarang, lu selalu diberikan kelancaran hidup; entah karir, percintaan, keluarga atau bahkan pertemanan sekalipun. Semoga gak ada hal-hal yang bikin lu ngerasa sakit. Lagi dan lagi gua cuma mau bilang kalau gua ngerasa beruntung banget baikan sama lu, semoga kita gak pernah jadi asing (lagi), ya? (iya, harus! Hahaha wajib). Ariska, seperti yang lu bilang, lu belum bisa percaya sepenuhnya sama gua. Pas denger itu sebenernya agak sedih sih tapi gua berusaha buat paham dan ngeliat dari sudut pandang lu, semoga suatu saat nanti, rasa percaya lu ke gua semakin meningkat ya seiring bertambahnya waktu. Semoga apapun yang gua lakuin kedepannya semata-mata bikin lu yakin buat kembali jadi temen gua. Semoga kedepannya konteks temenan kita yang tadinya cuma karena cerminan orang lain beneran bisa berubah jadi temen yang emang pada dasarnya saling percaya, percaya dengan hal-hal baik, percaya dengan cerita satu sama lain, dan hal apapun itu semoga didasari dengan “percaya”.      
-      </p>
-      <p style="margin-top: 0; margin-bottom: 0.5em; line-height: 1.5;">
-        Ris, gua sadar untuk dicap sebagai orang baik rasanya masih jauh banget, nyentuh kata pantes pun belum. Perlu lu ketahui, gua selalu berusaha untuk memperbaiki ris, apapun yang lu kurang suka, contohnya waktu main sama gua dan gua bete sama lu tapi malah telp temen gua (inget?). Sebenernya itu bukan tanpa alasan ris, temen gua kena kanker payudara, waktu itu dia ngabarin operasi dia udah selesai, dan gua janji ketika dia selesai operasi gua bakal langsung telp dia. Sejelek apapun mood gua, janji tetep janji kan ris? Harus ditepatin. Tapi gua akui gua juga salah, gua ga ngasih penjelasan apapun dan juga udah ngediemin lu, maaf ya kalau waktu itu lu ngerasa ga di orangin atau bahkan ngerasa ga dihargain, gua bakal terus berusaha memperbaiki mood gua kok, biar setidaknya ga kena imbasnya ke orang lain. Kalau lu sadar, setelah kejadian itu gua udah jarang kan telp temen gua kalau kita lagi main? Itu salah satu upaya diri gua buat memperbaiki biar kita mainnya enak, happy, ga ada yang ngerasa ga dihargain, apalagi ya.. Oh iya lu juga ngerasa setiap main sama gua makanannya ga enak wkwkwkwk tapi ada benernya kok, makanya gua selalu mau main di rumah kan kita bisa makan ketoprak (lu utang ketoprak ya lu sama gua) sekaligus menghindari hal-hal demikian tapi lu nya gamau jadi ya setiap kita main gua selalu mempersilakan lu buat milih tempat mau dimana dan mau makan apa, setidaknya semua hal berdasarkan selera lu ris, lagi-lagi bukan tanpa alasan tapi gua selalu mau lu ngerasa aman, nyaman, dan senang setiap main sama gua. Kalau gak bikin seneng ngapain main? Mending rebahan yakan wkwkwkwk. Semoga seburuk-buruknya diri gua, masih ada hal baik yang bisa dirasain ya ris.     
-      </p>
-      <p style="margin-top: 0; margin-bottom: 0.5em; line-height: 1.5;">
-        Sekali lagi, selamat bertambah usia, Ariska. Semoga selalu bahagia, dan bahagia selalu.      
-      </p>
-    </section>
+    <section id="messages" class="page">
+            <img src="dataset/A2.jpg" alt="Pesan spesial untukmu" onclick="zoomImage(this)">
+      <p style="margin-top: 0; margin-bottom: 0.5em; line-height: 1.5;">
+        Haiii! Selamat bertambah usia, Ariska. Selamat bertambah dan bertumbuh, dari segala hal yang ada di dunia. Hahahaha gak nyangka ya? Ariska, 4 tahun bukan waktu yang sebentar buat gua. Bahkan, terkadang gua masih gak percaya kita udah deket lagi. Selama 4 tahun kita belajar tumbuh dan mungkin gak saling tau tentang hal berat apa aja yang udah kita lewatin. Meskipun begitu, dengan ketemunya kita lagi di saat ini berarti.. hmm apa ya? Lulus ujian kali ya? Hahahaha. Makasih ya ris udah bertahan sejauh ini, kereenn!
+      </p>
+      <p style="margin-top: 0; margin-bottom: 0.5em; line-height: 1.5;">
+        Terima kasih juga atas segala kesempatannya, Ariska. Walaupun lu selalu bilang kesempatan ini hasil cerminan dari orang lain, tetep gua akan berterima kasih. Bisa baikan sama lu tuh hal yang udah gua tunggu sejak lama, dan sayangnya gua ga pernah bisa nunjukkin seberapa mau gua buat damai. Bukan karena ga niat, bukan. Sulit bagi gua nunjukkin keinginan buat damai sama lu karena gua yang masih ragu sama diri gua sendiri. Udah baik belum ya? Udah berubah belum ya? Karena rasanya semakin hari gua semakin hancur, dan takut dampaknya ke lu. Gua percaya tanpa gua pun lu udah bahagia, kalau dengan adanya gua, apa iya kebahagiaan lu bakal bertambah? Atau justru malah berkurang? Lagi dan lagi yang gua mau itu cuma bikin lu bahagia aja ris, rasanya kalau bisa damai tapi malah memperburuk suasana esensi dari “damai” itu sendiri malah ga tercipta kan? Jadi ya buat apa damai kalau bahagianya sama aja? Atau malah yang tadinya udah bahagia eh temenan sama gua malah memperkeruh suasana? Lebih ikhlas musuhan dan ngeliat lu bahagia ris daripada temenan sama gua malah kebawa hancurnya hidup gua hahahaha.
+      </p>
+      <p style="margin-top: 0; margin-bottom: 0.5em; line-height: 1.5;">
+        Perubahan dalam hidup adalah suatu hal yang biasa terjadi. Meskipun begitu sebenernya gua cukup kaget pas tau lu ngasep ris. Dulu, gua inget banget lu pernah bilang ke gua “jikalau aca merokok, ariska bakal marah besar dan cut off aca dari hidup ariska” dan lucunya karena kita berantem lama banget ya selama 4 tahun, alasan itu gua manipulasi di otak gua, yaaa gua ngerokok waktu itu, cuma biar dapet jawaban aja dari otak gua ini, “ca lu dimusuhin ariska tuh karena lu ngerokok, kan dia benci perokok” wkwkwk begitu kira-kira, tapi gua selalu percaya kalau suatu hal yang terjadi itu pasti ada alasannya. Lu memilih untuk bertahan sampai saat ini, dengan segala upaya bentuk cara lu pun udah bisa menggambarkan kalau diri lu hebat banget ris, makasih ya!
+      </p>
+      <p style="margin-top: 0; margin-bottom: 0.5em; line-height: 1.5;">
+        Ariska, semoga dengan bertambahnya usia ini semakin banyak hal-hal baik yang dateng ya, dan semoga gua salah satu di antaranya. Semoga di umur yang sekarang, lu selalu diberikan kelancaran hidup; entah karir, percintaan, keluarga atau bahkan pertemanan sekalipun. Semoga gak ada hal-hal yang bikin lu ngerasa sakit. Lagi dan lagi gua cuma mau bilang kalau gua ngerasa beruntung banget baikan sama lu, semoga kita gak pernah jadi asing (lagi), ya? (iya, harus! Hahaha wajib). Ariska, seperti yang lu bilang, lu belum bisa percaya sepenuhnya sama gua. Pas denger itu sebenernya agak sedih sih tapi gua berusaha buat paham dan ngeliat dari sudut pandang lu, semoga suatu saat nanti, rasa percaya lu ke gua semakin meningkat ya seiring bertambahnya waktu. Semoga apapun yang gua lakuin kedepannya semata-mata bikin lu yakin buat kembali jadi temen gua. Semoga kedepannya konteks temenan kita yang tadinya cuma karena cerminan orang lain beneran bisa berubah jadi temen yang emang pada dasarnya saling percaya, percaya dengan hal-hal baik, percaya dengan cerita satu sama lain, dan hal apapun itu semoga didasari dengan “percaya”.      
+      </p>
+      <p style="margin-top: 0; margin-bottom: 0.5em; line-height: 1.5;">
+        Ris, gua sadar untuk dicap sebagai orang baik rasanya masih jauh banget, nyentuh kata pantes pun belum. Perlu lu ketahui, gua selalu berusaha untuk memperbaiki ris, apapun yang lu kurang suka, contohnya waktu main sama gua dan gua bete sama lu tapi malah telp temen gua (inget?). Sebenernya itu bukan tanpa alasan ris, temen gua kena kanker payudara, waktu itu dia ngabarin operasi dia udah selesai, dan gua janji ketika dia selesai operasi gua bakal langsung telp dia. Sejelek apapun mood gua, janji tetep janji kan ris? Harus ditepatin. Tapi gua akui gua juga salah, gua ga ngasih penjelasan apapun dan juga udah ngediemin lu, maaf ya kalau waktu itu lu ngerasa ga di orangin atau bahkan ngerasa ga dihargain, gua bakal terus berusaha memperbaiki mood gua kok, biar setidaknya ga kena imbasnya ke orang lain. Kalau lu sadar, setelah kejadian itu gua udah jarang kan telp temen gua kalau kita lagi main? Itu salah satu upaya diri gua buat memperbaiki biar kita mainnya enak, happy, ga ada yang ngerasa ga dihargain, apalagi ya.. Oh iya lu juga ngerasa setiap main sama gua makanannya ga enak wkwkwkwk tapi ada benernya kok, makanya gua selalu mau main di rumah kan kita bisa makan ketoprak (lu utang ketoprak ya lu sama gua) sekaligus menghindari hal-hal demikian tapi lu nya gamau jadi ya setiap kita main gua selalu mempersilakan lu buat milih tempat mau dimana dan mau makan apa, setidaknya semua hal berdasarkan selera lu ris, lagi-lagi bukan tanpa alasan tapi gua selalu mau lu ngerasa aman, nyaman, dan senang setiap main sama gua. Kalau gak bikin seneng ngapain main? Mending rebahan yakan wkwkwkwk. Semoga seburuk-buruknya diri gua, masih ada hal baik yang bisa dirasain ya ris.     
+      </p>
+      <p style="margin-top: 0; margin-bottom: 0.5em; line-height: 1.5;">
+        Sekali lagi, selamat bertambah usia, Ariska. Semoga selalu bahagia, dan bahagia selalu.      
+      </p>
+    </section>
 
-    <section id="gifts" class="page">
-      <div class="gift-content">
-        <img src="devina/dataset/kamera.jpg" alt="Hadiah kamera yang indah">
-        
-        <div class="gift-box">
-          <h3 class="gift-title">KENAPA HADIAHNYA HARUS KAMERA?!</h3>
-          <ul class="gift-text">
-            <li>Alasan utamanya adalah karena gua belum bisa bikin lu percaya sama gua sehingga kesulitan untuk mengekspresikan diri seperti mengabadikan momen di media sosial itu rasanya susah sekali, jujur agak sedih tapi gapapa kok tenang aja, gua bakal terus belajar untuk memahami posisi lu dan lagi-lagi itu hak lu juga, gua akan selalu nunggu kesiapan lu buat nunjukkin ke semua orang kalau sebenernya ya kita udah damai dan baik-baik aja, gapapa, gua ngerti lu butuh waktu yang mungkin agak sedikit lebih lama. Makanya, adanya kamera ini menjadi salah satu solusi. Walaupun kita gak bisa mengabadikan momen-momen kita di media sosial, setidaknya kita bisa melakukannya di kamera ini, bukan?! Hahahahaa. Jadi, semoga kamera ini bisa menjadi salah satu wadah yang bikin lu ngerasa bebas berekspresi mengabadikan segala momen cantik di hidup lu atau bahkan momen yang sulit dibagikan sekalipun, seperti momen kita!</li>
-            <li>Alasan kedua, waktu kita ngobrol di Ruangnamu, selain ngobrolin kasus bapak gua, kita juga ngobrol tentang impian kita ris, itu pun kalau lu inget, gak inget juga gapapa sih wkwk. Di situ lu bilang kalau lu ada ketertarikan terjun di media sosial, pas denger itu wah gua setuju banget ris! Gua emang udah dari lama ngerasa lu ada bakat di sana, ada potensi di sana, ya kalau lu mau mulai, gua yakin lu bisa, gitu. Waktu lagi mikir, mau ngasih apa ya ke Ariska? Untungnya gua inget cerita ini! Jadi ya, kenapa enggak? Makanya, gua beli kamera ini sebagai jembatan, siapa tau lu mau mulai semuanya, bisa dari kamera ini. Semoga kamera ini sedikit membantu ya ris, walaupun gua gak tau lu puas apa enggak, gua gak tau ini speknya bagus apa enggak, percaya ris ini bukan dunia gua wkwkwk gua sangat menghindari dunia perlensaan tapi demi membelikan hadiah ini gua rela nonton +20 video di Tiktok! HAHAHA, yaAllah takut banget lu gak suka. Gapapa deh, kalau pun emang gak suka, nanti gua bakal belajar terjun ke dunia lensa, biar kalau suatu saat beliin lu kamera lagi, udah sesuai spek dan kriteria lensa yang lu mau, untuk sementara kamera ini dulu ya ris, huhu maaf kalau belum puas.</li>
-            <li>Dua alasan di atas sebenernyaa udah sangat cukup. Gua rasa ga perlu banyak pertimbangan untuk bikin lu bahagia HAHAHA. Seperti yang gua bilang, gua mau ketika lu jadi temen gua (lagi), bukan lagi rasa sedih, kesel, atau bahkan amarah yang lu terima, gua mau lu selalu ngerasa bahagia semoga kamera ini bisa menjadi salah satu sumber kebahagiaan lu ya. Sebelum menjadi temen gua, bisa gua pastiin kehidupan lu udah bahagia. Nah, kalau sekarang jadi temen gua lagi tapi ga ngerasa jauh lebih bahagia buat apa temenan? Gua lebih ikhlas kita ga usah temenan yang penting lu bahagia daripada temenan lagi tapi cuma dapet sedihnya doang HAHAHA. Lagi dan lagi, semoga seburuk-buruknya diri gua, masih ada hal-hal baik yang bisa diterima yaa.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-        
-  </main>
+    <section id="gifts" class="page">
+      <div class="gift-content">
+                <img src="dataset/kamera.jpg" alt="Hadiah kamera yang indah">
+        
+        <div class="gift-box">
+          <h3 class="gift-title">KENAPA HADIAHNYA HARUS KAMERA?!</h3>
+          <ul class="gift-text">
+            <li>Alasan utamanya adalah karena gua belum bisa bikin lu percaya sama gua sehingga kesulitan untuk mengekspresikan diri seperti mengabadikan momen di media sosial itu rasanya susah sekali, jujur agak sedih tapi gapapa kok tenang aja, gua bakal terus belajar untuk memahami posisi lu dan lagi-lagi itu hak lu juga, gua akan selalu nunggu kesiapan lu buat nunjukkin ke semua orang kalau sebenernya ya kita udah damai dan baik-baik aja, gapapa, gua ngerti lu butuh waktu yang mungkin agak sedikit lebih lama. Makanya, adanya kamera ini menjadi salah satu solusi. Walaupun kita gak bisa mengabadikan momen-momen kita di media sosial, setidaknya kita bisa melakukannya di kamera ini, bukan?! Hahahahaa. Jadi, semoga kamera ini bisa menjadi salah satu wadah yang bikin lu ngerasa bebas berekspresi mengabadikan segala momen cantik di hidup lu atau bahkan momen yang sulit dibagikan sekalipun, seperti momen kita!</li>
+            <li>Alasan kedua, waktu kita ngobrol di Ruangnamu, selain ngobrolin kasus bapak gua, kita juga ngobrol tentang impian kita ris, itu pun kalau lu inget, gak inget juga gapapa sih wkwk. Di situ lu bilang kalau lu ada ketertarikan terjun di media sosial, pas denger itu wah gua setuju banget ris! Gua emang udah dari lama ngerasa lu ada bakat di sana, ada potensi di sana, ya kalau lu mau mulai, gua yakin lu bisa, gitu. Waktu lagi mikir, mau ngasih apa ya ke Ariska? Untungnya gua inget cerita ini! Jadi ya, kenapa enggak? Makanya, gua beli kamera ini sebagai jembatan, siapa tau lu mau mulai semuanya, bisa dari kamera ini. Semoga kamera ini sedikit membantu ya ris, walaupun gua gak tau lu puas apa enggak, gua gak tau ini speknya bagus apa enggak, percaya ris ini bukan dunia gua wkwkwk gua sangat menghindari dunia perlensaan tapi demi membelikan hadiah ini gua rela nonton +20 video di Tiktok! HAHAHA, yaAllah takut banget lu gak suka. Gapapa deh, kalau pun emang gak suka, nanti gua bakal belajar terjun ke dunia lensa, biar kalau suatu saat beliin lu kamera lagi, udah sesuai spek dan kriteria lensa yang lu mau, untuk sementara kamera ini dulu ya ris, huhu maaf kalau belum puas.</li>
+            <li>Dua alasan di atas sebenernyaa udah sangat cukup. Gua rasa ga perlu banyak pertimbangan untuk bikin lu bahagia HAHAHA. Seperti yang gua bilang, gua mau ketika lu jadi temen gua (lagi), bukan lagi rasa sedih, kesel, atau bahkan amarah yang lu terima, gua mau lu selalu ngerasa bahagia semoga kamera ini bisa menjadi salah satu sumber kebahagiaan lu ya. Sebelum menjadi temen gua, bisa gua pastiin kehidupan lu udah bahagia. Nah, kalau sekarang jadi temen gua lagi tapi ga ngerasa jauh lebih bahagia buat apa temenan? Gua lebih ikhlas kita ga usah temenan yang penting lu bahagia daripada temenan lagi tapi cuma dapet sedihnya doang HAHAHA. Lagi dan lagi, semoga seburuk-buruknya diri gua, masih ada hal-hal baik yang bisa diterima yaa.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+        
+  </main>
 
-  <div id="modal" class="modal" onclick="closeModal()">
-    <img id="modal-img" src="" alt="Tampilan zoom gambar">
-  </div>
+  <div id="modal" class="modal" onclick="closeModal()">
+    <img id="modal-img" src="" alt="Tampilan zoom gambar">
+  </div>
 
-  <audio id="lagu" loop hidden>
-    <source src="devina/dataset/lagu.mp3" type="audio/mpeg">
-    Maaf, browser kamu tidak mendukung pemutar audio.
-  </audio>
-  
-  <script>
-    // Tunggu interaksi pengguna untuk memulai pemutaran audio
-    document.addEventListener('DOMContentLoaded', function () {
-      const audio = document.getElementById('lagu');
-      
-      // Play saat pengguna klik di mana saja di halaman
-      document.body.addEventListener('click', function () {
-        audio.play();
-      }, { once: true });
-    });
-  </script>  
+  <audio id="lagu" loop hidden>
+        <source src="dataset/lagu.mp3" type="audio/mpeg">
+    Maaf, browser kamu tidak mendukung pemutar audio.
+  </audio>
+  
+  <script>
+    // Tunggu interaksi pengguna untuk memulai pemutaran audio
+    document.addEventListener('DOMContentLoaded', function () {
+      const audio = document.getElementById('lagu');
+      
+      // Play saat pengguna klik di mana saja di halaman
+      document.body.addEventListener('click', function () {
+        audio.play();
+      }, { once: true });
+    });
+  </script>  
 
-  <script>
-    function navigate(page) {
-      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-      document.getElementById(page).classList.add('active');
-    }
+  <script>
+    function navigate(page) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(page).classList.add('active');
+    }
 
-    function zoomImage(img) {
-      const modal = document.getElementById('modal');
-      const modalImg = document.getElementById('modal-img');
-      modalImg.src = img.src;
-      modal.style.display = 'flex';
-    }
+    function zoomImage(img) {
+      const modal = document.getElementById('modal');
+      const modalImg = document.getElementById('modal-img');
+      modalImg.src = img.src;
+      modal.style.display = 'flex';
+    }
 
-    function closeModal() {
-      document.getElementById('modal').style.display = 'none';
-    }
+    function closeModal() {
+      document.getElementById('modal').style.display = 'none';
+    }
 
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        closeModal();
-      }
-    });
-  </script>
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
 <script>
-  // Fungsi untuk menyimpan halaman yang dikunjungi
-  function saveNavigation(page) {
-    let history = JSON.parse(localStorage.getItem("navHistory")) || [];
-    if (history[history.length - 1] !== page) {
-      history.push(page);
-      localStorage.setItem("navHistory", JSON.stringify(history));
-    }
-  }
+  // Fungsi untuk menyimpan halaman yang dikunjungi
+  function saveNavigation(page) {
+    let history = JSON.parse(localStorage.getItem("navHistory")) || [];
+    if (history[history.length - 1] !== page) {
+      history.push(page);
+      localStorage.setItem("navHistory", JSON.stringify(history));
+    }
+  }
 
-  // Fungsi untuk Back
-  function goBack() {
-    let history = JSON.parse(localStorage.getItem("navHistory")) || [];
-    if (history.length > 1) {
-      history.pop(); // Hapus current page
-      const prev = history.pop(); // Ambil halaman sebelumnya
-      localStorage.setItem("navHistory", JSON.stringify(history));
-      window.location.href = prev;
-    } else {
-      alert("Tidak ada halaman sebelumnya.");
-    }
-  }
+  // Fungsi untuk Back
+  function goBack() {
+    let history = JSON.parse(localStorage.getItem("navHistory")) || [];
+    if (history.length > 1) {
+      history.pop(); // Hapus current page
+      const prev = history.pop(); // Ambil halaman sebelumnya
+      localStorage.setItem("navHistory", JSON.stringify(history));
+      window.location.href = prev;
+    } else {
+      alert("Tidak ada halaman sebelumnya.");
+    }
+  }
 
-  // Fungsi untuk Next (ke halaman berikut dari daftar, bukan riwayat)
-  function goNext() {
-    const pages = ["beranda.html", "opsi1.html", "opsi2.html", "opsi3.html"];
-    const current = window.location.pathname.split("/").pop();
-    const currentIndex = pages.indexOf(current);
-    if (currentIndex !== -1 && currentIndex < pages.length - 1) {
-      const nextPage = pages[currentIndex + 1];
-      window.location.href = nextPage;
-    } else {
-      alert("Ini halaman terakhir.");
-    }
-  }
+  // Fungsi untuk Next (ke halaman berikut dari daftar, bukan riwayat)
+  function goNext() {
+    const pages = ["beranda.html", "opsi1.html", "opsi2.html", "opsi3.html"];
+    const current = window.location.pathname.split("/").pop();
+    const currentIndex = pages.indexOf(current);
+    if (currentIndex !== -1 && currentIndex < pages.length - 1) {
+      const nextPage = pages[currentIndex + 1];
+      window.location.href = nextPage;
+    } else {
+      alert("Ini halaman terakhir.");
+    }
+  }
 
-  // Jalankan saat halaman dimuat
-  document.addEventListener("DOMContentLoaded", function () {
-    const currentPage = window.location.pathname.split("/").pop();
-    saveNavigation(currentPage);
-  });
+  // Jalankan saat halaman dimuat
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop();
+    saveNavigation(currentPage);
+  });
 </script>
 
 </body>
